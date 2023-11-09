@@ -1,33 +1,72 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+<p align="center">
+  <img src="https://lty-image-bed.oss-cn-shenzhen.aliyuncs.com/blog/search-gpt-icon.png" width="200" height="200">
+</p>
+<div align="center">
 
-## Getting Started
 
-First, run the development server:
+# Search GPT
 
-```bash
-pnpm dev
-# or
-npm run dev
-```
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable-next-line MD036 -->
+_✨ Your most reliable search assistant. ✨_
+<!-- prettier-ignore-end -->
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/ltyzzzxxx/search-gpt-extension?display_name=tag" />
+  <img src="https://img.shields.io/github/stars/ltyzzzxxx/search-gpt-extension" />
+  <img src="https://img.shields.io/github/forks/ltyzzzxxx/search-gpt-extension" />
+  <img src="https://img.shields.io/github/issues/ltyzzzxxx/search-gpt-extension" />
+  <img src="https://img.shields.io/badge/license-Apache%20-yellow.svg" />
+</p>
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
+</div>
 
-## Making production build
+[English Doc](./README_EN.md) | [中文文档](./README_CN.md)
 
-Run the following:
+## Introduction
 
-```bash
-pnpm build
-# or
-npm run build
-```
+Search GPT is a browser extension that equips your browser with the capabilities of ChatGPT. Once you install the extension and conduct searches on browsers like Google or Baidu, the page will also display responses from GPT.
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+The extension is implemented based on Plasmo and React.
 
-## Submit to the webstores
+## Preview
 
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+<img width="987" alt="image" src="https://github.com/ltyzzzxxx/search-gpt-extension/assets/73587471/f2a54ea2-b169-4dbf-82b1-295d8d3cdf28">
+
+## Features
+
+- ✨ Display GPT response on the browser page. Temporarily support Google or Baidu.
+
+- 🌟 Summarize the content of each search results page. (Future feature)
+
+## Quick Start
+
+1.   Initialize.
+
+     ```bash
+     pnpm install
+     ```
+
+2.   Run and build the extension.
+
+     ```bash
+     pnpm run dev
+     ```
+
+3.   Load the `build/chrome-mv3-dev` folder as an extension.
+
+<img width="1470" alt="image" src="https://github.com/ltyzzzxxx/search-gpt-extension/assets/73587471/4d42adda-4548-4e92-a528-96b8b2598c43">
+
+4.   Enter your API Key and enjoy the extension!
+
+<img width="408" alt="image" src="https://github.com/ltyzzzxxx/search-gpt-extension/assets/73587471/5ab4ed75-b7aa-48d5-87be-fffebfc90d28">
+
+## Special Thanks
+
+- [Plasmo](https://github.com/PlasmoHQ/plasmo)
+
+
+## Open Source License
+
+Apache License Version 2.0 see http://www.apache.org/licenses/LICENSE
