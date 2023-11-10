@@ -34,6 +34,8 @@ The extension is implemented based on Plasmo and React.
 
 <img width="987" alt="image" src="https://github.com/ltyzzzxxx/search-gpt-extension/assets/73587471/f2a54ea2-b169-4dbf-82b1-295d8d3cdf28">
 
+<img width="724" alt="iShot2023-11-10 15 35 40" src="https://github.com/ltyzzzxxx/search-gpt-extension/assets/73587471/0c3b850c-71e9-410d-882b-b8b2f30097fd">
+
 ## Features
 
 - ✨ Display GPT response on the browser page. Temporarily support Google or Baidu.
