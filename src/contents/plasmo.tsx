@@ -92,6 +92,27 @@ const obtainTop10ResultPages = (hostname: string) => {
       }
       i += 1
     }
+  } else if (hostname == "www.baidu.com") {
+    console.log("baiduhhhhh")
+    let parentPageElement = document.getElementById("content_left")
+    let i = 0
+    for (let child of parentPageElement.children) {
+      let element = child.querySelector('.c-title.t.t.tts-title')
+      let firstAnchor = element ? element.querySelector('a') : null;
+      let href = firstAnchor ? firstAnchor.href : null;
+
+      if (href != null) {
+        console.log("第" + i + "个page", href)
+        // add collapse
+        let link = href
+        let container = document.createElement("div")
+        container.id = "page-collapse-" + i
+        const root = createRoot(container)
+        child.insertAdjacentElement("afterend", container)
+        root.render(<PageCollapse link={link} />)
+      }
+      i += 1
+    }
   }
 }
 
