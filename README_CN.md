@@ -34,6 +34,8 @@ Search GPT 是一个浏览器插件，它将 ChatGPT 的能力赋予浏览器。
 
 <img width="987" alt="image" src="https://github.com/ltyzzzxxx/search-gpt-extension/assets/73587471/f2a54ea2-b169-4dbf-82b1-295d8d3cdf28">
 
+<img width="724" alt="iShot2023-11-10 15 35 40" src="https://github.com/ltyzzzxxx/search-gpt-extension/assets/73587471/0c3b850c-71e9-410d-882b-b8b2f30097fd">
+
 ## 功能
 
 - ✨ 在浏览器页面展示 GPT 响应内容。暂时支持 Google 与 Baidu。
