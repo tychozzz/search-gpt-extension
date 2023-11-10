@@ -58,9 +58,17 @@ Search GPT 是一个浏览器插件，它将 ChatGPT 的能力赋予浏览器。
 
 <img width="1470" alt="image" src="https://github.com/ltyzzzxxx/search-gpt-extension/assets/73587471/4d42adda-4548-4e92-a528-96b8b2598c43">
 
-4.   输入 API Key，体验插件！
+4.   输入 API Key
 
 <img width="408" alt="image" src="https://github.com/ltyzzzxxx/search-gpt-extension/assets/73587471/5ab4ed75-b7aa-48d5-87be-fffebfc90d28">
+
+5.   如果你想要总结每一个搜索结果页的话，需要运行 crawler。步骤如下：
+
+```
+cd crawler
+pip install -r requirements.txt
+python app.py
+```
 
 ## 特别鸣谢
 

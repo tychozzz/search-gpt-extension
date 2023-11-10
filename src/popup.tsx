@@ -7,21 +7,21 @@ import { Storage } from "@plasmohq/storage"
 const storage = new Storage()
 
 const IndexPopup = () => {
-  const [apiKey, setApiKey] = useState("")
-  const [status, setStatus] = useState("Enter your API Key to enjoy the extension!")
+  const [gptApiKey, setGptApiKey] = useState("")
+  const [gptStatus, setGptStatus] = useState("Enter your GPT API Key")
 
   useEffect(() => {
     const fetchApiKey = async () => {
-      const savedApiKey = await storage.get("apiKey")
-      if (savedApiKey) {
-        setApiKey(savedApiKey)
-        setStatus("API Key saved successfully.")
+      const savedGptApiKey = await storage.get("gptApiKey")
+      if (savedGptApiKey) {
+        setGptApiKey(savedGptApiKey)
+        setGptStatus("GPT API Key saved successfully.")
       }
     }
     fetchApiKey()
   }, [])
 
-  const verifyApiKey = async (key: string) => {
+  const verifyGptApiKey = async (key: string) => {
     try {
       const response = await fetch("https://api.openai.com/v1/engines", {
         headers: {
@@ -32,54 +32,76 @@ const IndexPopup = () => {
       if (response.ok) {
         return true
       }
-      setStatus("Invalid API Key.")
+      setGptStatus("Invalid GPT API Key.")
       return false
     } catch (error) {
-      setStatus("Error verifying API Key.")
+      setGptStatus("Error verifying GPT API Key.")
       return false
     }
   }
 
-  const saveApiKey = async () => {
-    if (await verifyApiKey(apiKey)) {
+  const saveGptApiKey = async () => {
+    if (await verifyGptApiKey(gptApiKey)) {
       try {
-        await storage.set("apiKey", apiKey)
-        setStatus("API Key saved successfully.")
+        await storage.set("gptApiKey", gptApiKey)
+        setGptStatus("GPT API Key saved successfully.")
       } catch (error) {
-        setStatus("Failed to save API Key.")
+        setGptStatus("Failed to save GPT API Key.")
       }
     }
+  }
+
+  const clearGptApiKey = async () => {
+    await storage.remove("gptApiKey")
+    setGptApiKey("")
+    setGptStatus("Enter your GPT API Key")
   }
 
   return (
     <div
       style={{
         width: "300px",
-        padding: "10px"
+        padding: "10px",
+        display: "flex",
+        flexDirection: "column"
       }}>
-      <div style={{
-        fontSize: "18px",
-        fontWeight: "400"
-      }}>{status}</div>
-      <Divider />
       <div
         style={{
+          fontSize: "18px",
+          fontWeight: "400"
+        }}>
+        {gptStatus}
+      </div>
+      <div
+        style={{
+          marginTop: "10px",
           display: "flex"
         }}>
         <Input
           type="text"
-          value={apiKey}
+          value={gptApiKey}
           prefix={<KeyOutlined />}
-          onChange={(e) => setApiKey(e.target.value)}
+          onChange={(e) => setGptApiKey(e.target.value)}
           placeholder="Enter your OpenAI API Key"
         />
+      </div>
+      <div style={{ marginTop: "10px" }}>
         <Button
           type="primary"
           style={{
             marginLeft: "10px"
           }}
-          onClick={saveApiKey}>
+          onClick={saveGptApiKey}>
           Save
+        </Button>
+        <Button
+          type="dashed"
+          danger
+          style={{
+            marginLeft: "10px"
+          }}
+          onClick={clearGptApiKey}>
+          Clear
         </Button>
       </div>
     </div>

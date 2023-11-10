@@ -38,7 +38,7 @@ The extension is implemented based on Plasmo and React.
 
 - ✨ Display GPT response on the browser page. Temporarily support Google or Baidu.
 
-- 🌟 Summarize the content of each search results page. (Future feature)
+- 🌟 Summarize the content of each search results page.
 
 ## Quick Start
 
@@ -58,9 +58,17 @@ The extension is implemented based on Plasmo and React.
 
 <img width="1470" alt="image" src="https://github.com/ltyzzzxxx/search-gpt-extension/assets/73587471/4d42adda-4548-4e92-a528-96b8b2598c43">
 
-4.   Enter your API Key and enjoy the extension!
+4.   Enter your API Key.
 
 <img width="408" alt="image" src="https://github.com/ltyzzzxxx/search-gpt-extension/assets/73587471/5ab4ed75-b7aa-48d5-87be-fffebfc90d28">
+
+5.   Run the crawler according to the following commands if you want to summarize the content of each search results page.
+
+```
+cd crawler
+pip install -r requirements.txt
+python app.py
+```
 
 ## Special Thanks
 
